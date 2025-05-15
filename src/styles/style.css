@@ -1,0 +1,216 @@
+body {
+  background-color: #050508;
+  color: #c8c8d0;
+  font-family: "Bitter", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #242440;
+  color: #fff;
+  padding: 8px 15px;
+  z-index: 9999;
+  transition: top 0.3s;
+  border-bottom-right-radius: 4px;
+  text-decoration: none;
+  font-family: "Special Elite", cursive;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: none;
+  box-shadow: 0 0 10px rgba(142, 142, 255, 0.6);
+}
+
+header {
+  background-color: rgba(18, 18, 28, 0.7);
+  border-bottom: 1px solid rgba(60, 60, 90, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.brand-name {
+  font-family: "Creepster", cursive;
+  font-size: 2.2rem;
+  color: #9494c8;
+  text-shadow: 0 0 8px rgba(80, 80, 150, 0.6), 0 0 15px rgba(50, 50, 100, 0.4);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.navigation-drawer {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list li a {
+  color: #a2a2c8;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-family: "Special Elite", cursive;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 3px rgba(40, 40, 80, 0.5);
+  position: relative;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.nav-list li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #4a4a70;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.nav-list li a:hover {
+  color: #b0b0d0;
+  text-shadow: 0 0 5px rgba(100, 100, 160, 0.4);
+}
+
+.nav-list li a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.drawer-button {
+  display: none;
+  background: rgba(30, 30, 50, 0.6);
+  border: 1px solid #2d2d48;
+  color: #a0a0c0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: "Special Elite", cursive;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.drawer-button:hover {
+  background: rgba(40, 40, 65, 0.8);
+  box-shadow: 0 0 10px rgba(100, 100, 160, 0.2);
+}
+
+.main-content {
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6);
+  background-color: #0a0a13;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(30, 30, 50, 0.1) 0%,
+      transparent 80%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(20, 20, 30, 0.1) 0%,
+      transparent 70%
+    );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 25, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a48;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a60;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #242440;
+  color: #fff;
+  padding: 8px 15px;
+  z-index: 9999;
+  transition: top 0.3s;
+  border-bottom-right-radius: 4px;
+  text-decoration: none;
+  font-family: "Special Elite", cursive;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: none;
+  box-shadow: 0 0 10px rgba(142, 142, 255, 0.6);
+}
+#main-content:focus {
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-header {
+    position: relative;
+  }
+
+  .navigation-drawer {
+    display: flex;
+    position: static;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .nav-list li a {
+    font-size: 0.9rem;
+  }
+
+  .brand-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 10px;
+  }
+
+  .nav-list li a {
+    font-size: 0.8rem;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+  }
+}
