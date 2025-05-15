@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"), // Ubah dari "dist" ke "public"
     clean: true,
   },
   module: {
@@ -28,19 +28,17 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "src/public/"),
-          to: path.resolve(__dirname, "dist/"),
-          noErrorOnMissing: true, // Tambahkan ini untuk menghindari error jika folder kosong
+          to: path.resolve(__dirname, "public/"), // Ubah dari "dist/" ke "public/"
+          noErrorOnMissing: true,
         },
         {
-          // Copy manifest.json
           from: path.resolve(__dirname, "manifest.json"),
-          to: path.resolve(__dirname, "dist/"),
+          to: path.resolve(__dirname, "public/"), // Ubah dari "dist/" ke "public/"
         },
         {
-          // Copy offline.html
           from: path.resolve(__dirname, "src/offline.html"),
-          to: path.resolve(__dirname, "dist/"),
-          noErrorOnMissing: true, // Tambahkan ini untuk menghindari error
+          to: path.resolve(__dirname, "public/"), // Ubah dari "dist/" ke "public/"
+          noErrorOnMissing: true,
         },
       ],
     }),
